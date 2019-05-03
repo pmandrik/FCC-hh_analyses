@@ -1,0 +1,12 @@
+
+{
+   "mgp8_pp_tt_tlep_act":      {"numberOfEvents": 990000, "sumOfWeights": 990000, "crossSection": , "kfactor": 1.0, "matchingEfficiency": 1.0},
+   "mgp8_pp_tt_tlep_aut":      {"numberOfEvents": 990000, "sumOfWeights": 990000, "crossSection": , "kfactor": 1.0, "matchingEfficiency": 1.0},
+   "p8_pp_tt_Pt2500toInf":     {"numberOfEvents": 10400000, "sumOfWeights": 10400000, "crossSection": 0.1531, "kfactor": 3.0, "matchingEfficiency": 1.0},
+   "mgp8_pp_t123j_5f":         {"numberOfEvents": 191417, "sumOfWeights": 191417, "crossSection": 7524.0, "kfactor": 2.16, "matchingEfficiency": 1.0},
+   "mgp8_pp_jjja_5f":          {"numberOfEvents": 500000, "sumOfWeights": 500000, "crossSection": 0.305493, "kfactor": 1.0, "matchingEfficiency": 1.0},
+   "mgp8_pp_vj_4f_M_5000_inf": {"numberOfEvents": 500000, "sumOfWeights": 500000, "crossSection": 0.305493, "kfactor": 1.0, "matchingEfficiency": 1.0}
+}
+
+
+

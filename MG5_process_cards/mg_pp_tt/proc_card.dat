@@ -1,0 +1,53 @@
+#************************************************************
+#*                     MadGraph5_aMC@NLO                    *
+#*                                                          *
+#*                *                       *                 *
+#*                  *        * *        *                   *
+#*                    * * * * 5 * * * *                     *
+#*                  *        * *        *                   *
+#*                *                       *                 *
+#*                                                          *
+#*                                                          *
+#*         VERSION 2.3.3                 2015-10-25         *
+#*                                                          *
+#*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+#*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+#*                                                          *
+#************************************************************
+#*                                                          *
+#*               Command File for MadGraph5_aMC@NLO         *
+#*                                                          *
+#*     run as ./bin/mg5_aMC  filename                       *
+#*                                                          *
+#************************************************************
+set group_subprocesses Auto
+set ignore_six_quark_processes False
+set loop_color_flows False
+set gauge unitary
+set complex_mass_scheme False
+set max_npoint_for_channel 0
+import model TopFCNC_UFO-kappa_act_ProdConventions_no_c_mass --modelname
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define vl = ve vm vt
+define w   = w+ w-
+define l+  = e+ mu+ ta+
+define l-  = e- mu- ta-
+define vl  = ve vm vt
+define vl~ = ve~ vm~ vt~
+define j   = g u u~ d d~ c c~ s s~ b b~
+define p   = g u u~ d d~ c c~ s s~
+#generate    p p > t  a, (t  > w+ b,  w+ > l+ vl ) NP=1 @10
+#add process p p > t~ a, (t~ > w- b~, w- > l- vl~) NP=1 @20
+
+   # generate p p > t t~ NP=0, (t > a c), (t~ > a c~) @10
+   generate p p > t t~ @10
+
+#    generate p p > t t~, t  > c  a  @10 NP=1
+#add process p p > t t~, t~  > c~ a  @20 NP=1
+
+output mg_pp_tt_act -f -nojpeg
+
+

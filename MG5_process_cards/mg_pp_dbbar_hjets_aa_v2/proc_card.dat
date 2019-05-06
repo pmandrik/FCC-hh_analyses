@@ -1,0 +1,12 @@
+# import model TopFCNC_UFO-kappa_act_ProdConventions_no_c_mass --modelname
+import model Higgs_Effective_Couplings_UFO__Higgs_top_FCNC_UFO-card --modelname
+
+define p = g b~ d
+define j = g b  d~
+
+add process p p > h   NP=1 HIG=0 HIW=0 QED=0 QCD=99, h > a a @0
+add process p p > h j NP=1 HIG=0 HIW=0 QED=0 QCD=99, h > a a @1
+
+output mg_pp_dbbar_hjets_aa_v2 -f -nojpeg
+
+
